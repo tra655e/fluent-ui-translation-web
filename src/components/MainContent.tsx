@@ -84,12 +84,25 @@ const MainContent = () => {
             </Card>
             
             <div className="flex justify-center gap-2 mt-4">
-              <button className="bg-islamic-blue text-white p-2">
-                <ArrowLeft size={20} />
-              </button>
-              <button className="bg-islamic-blue text-white p-2">
-                <ArrowRight size={20} />
-              </button>
+              {isRTL ? (
+                <>
+                  <button className="bg-islamic-blue text-white p-2">
+                    <ArrowRight size={20} />
+                  </button>
+                  <button className="bg-islamic-blue text-white p-2">
+                    <ArrowLeft size={20} />
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button className="bg-islamic-blue text-white p-2">
+                    <ArrowLeft size={20} />
+                  </button>
+                  <button className="bg-islamic-blue text-white p-2">
+                    <ArrowRight size={20} />
+                  </button>
+                </>
+              )}
             </div>
           </div>
           
@@ -99,13 +112,13 @@ const MainContent = () => {
             </h3>
           </div>
           
-          {/* Article cards */}
+          {/* Article cards with updated Islamic photos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { 
                 title: { ar: 'اقرأ قراءة النافذ!!', en: 'Read with Insight!!' },
                 desc: { ar: 'التاريخ سجل الأمم، وخزائن الحكم، من فاض...', en: 'History is the record of nations, and the treasures of wisdom, from which...' },
-                image: 'https://images.unsplash.com/photo-1589729132389-8f0e0b55b91e?q=80&w=300&h=200&auto=format&fit=crop'
+                image: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=300&h=200&auto=format&fit=crop'
               },
               {
                 title: { ar: 'الإسلام وكيان الإنسان', en: 'Islam and Human Existence' },
@@ -115,7 +128,7 @@ const MainContent = () => {
               {
                 title: { ar: 'منّة الله عز وجل على البشرية بنبيه', en: 'Allah\'s Blessing on Humanity with His Prophet' },
                 desc: { ar: 'منّ الله عز وجل على البشرية ببعثة نبينا...', en: 'Allah has blessed humanity with the mission of our Prophet...' },
-                image: 'https://images.unsplash.com/photo-1564046247017-4462f3c1e9a2?q=80&w=300&h=200&auto=format&fit=crop'
+                image: 'https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?q=80&w=300&h=200&auto=format&fit=crop'
               }
             ].map((article, i) => (
               <Card key={i} className="overflow-hidden">

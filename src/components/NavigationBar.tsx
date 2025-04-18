@@ -36,18 +36,6 @@ const NavigationBar = () => {
           />
         </div>
 
-        <div className="flex items-center gap-1">
-          <button className="p-2 bg-islamic-red text-white h-12 w-12 flex items-center justify-center">
-            <Search size={20} />
-          </button>
-          <button className="p-2 bg-blue-800 text-white h-12 w-12 flex items-center justify-center">
-            <span className="text-2xl font-bold">A</span>
-          </button>
-          <button className="p-2 bg-islamic-red text-white h-12 w-12 flex items-center justify-center">
-            <span className="rotate-90 inline-block">♿</span>
-          </button>
-        </div>
-        
         <div className={`flex-1 flex justify-center ${isRTL ? 'flex-row-reverse' : ''}`}>
           <ul className={`flex ${isRTL ? 'flex-row-reverse' : ''} gap-4`}>
             {menuItems.map((item) => (
@@ -61,6 +49,18 @@ const NavigationBar = () => {
               </li>
             ))}
           </ul>
+        </div>
+        
+        <div className={`flex items-center gap-1 ${isRTL ? 'order-first' : 'order-last'}`}>
+          <button className="p-2 bg-islamic-red text-white h-12 w-12 flex items-center justify-center">
+            <Search size={20} />
+          </button>
+          <button className="p-2 bg-blue-800 text-white h-12 w-12 flex items-center justify-center">
+            <span className="text-2xl font-bold">A</span>
+          </button>
+          <button className="p-2 bg-islamic-red text-white h-12 w-12 flex items-center justify-center">
+            <span className="rotate-90 inline-block">♿</span>
+          </button>
         </div>
       </div>
     </nav>
