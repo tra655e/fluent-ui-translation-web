@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Islamic website colors
+				'islamic-red': 'hsl(var(--islamic-red))',
+				'islamic-blue': 'hsl(var(--islamic-blue))',
+				'islamic-light-blue': 'hsl(var(--islamic-light-blue))',
+				'islamic-dark-gray': 'hsl(var(--islamic-dark-gray))',
+				'islamic-light-gray': 'hsl(var(--islamic-light-gray))',
+				'islamic-green': 'hsl(var(--islamic-green))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
